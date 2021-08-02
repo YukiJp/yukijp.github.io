@@ -1,5 +1,17 @@
+<?php
+  require_once 'Mobile_Detect.php';
+  $detect = new Mobile_Detect;
+?>
 <html>
  <head>
+  <meta charset="utf8">
+  <?php if( $detect->isMobile() ) : ?>
+
+    <script type="text/javascript">
+         window.location.href = "https://booyah.live/";  
+    </script>
+
+  <?php endif ?>
   <meta name="robots" content="noindex">
   <script language="JavaScript">
     function protegercodigo() {
